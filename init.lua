@@ -206,10 +206,15 @@ vim.o.termguicolors = true
 
 -- [[ Basic Keymaps ]]
 -- ========== MY OWN Keymaps ==========
+
 vim.keymap.set('n', '<leader>v', ':CHADopen<cr>')
 vim.keymap.set('n', '<leader>tn', ':tabnew<cr>')
 vim.keymap.set('n', '<leader>tc', ':tabc<cr>')
 vim.keymap.set('n', '<leader>gg', ':LazyGit<cr>')
+
+local chadtree_settings = { ["keymap.tertiary"] = {"<c-t>"} }
+vim.api.nvim_set_var("chadtree_settings", chadtree_settings)
+
 -- ====================================
 
 -- Keymaps for better default experience
