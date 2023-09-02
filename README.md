@@ -1,5 +1,11 @@
 # nvim-config
 
+## Dependencies
+- Newer version of neovim (some plugins may not work on old versions)
+- [ripgrep](https://github.com/BurntSushi/ripgrep) for telescope to better find files and handle gitignore
+- Chadtree requires `python3-venv` so it can install its dependenices using :CHADdeps
+- (Optional) Install [Lazygit](https://github.com/jesseduffield/lazygit) for git GUI
+
 ## Installation
 
 ### Archive
@@ -15,4 +21,3 @@ git clone https://github.com/Bojidarist/nvim-config.git ~/.config/nvim
 ```
 git clone git@github.com:Bojidarist/nvim-config.git ~/.config/nvim
 ```
-
