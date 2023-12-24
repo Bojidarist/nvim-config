@@ -431,6 +431,19 @@ mason_lspconfig.setup_handlers {
   end,
 }
 
+-- ========== Custom indents ==========
+vim.opt_global.shiftwidth = 2
+vim.opt_global.tabstop = 2
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "go",
+	callback = function()
+		vim.opt_local.shiftwidth = 4
+		vim.opt_local.tabstop = 4
+	end
+})
+-- ====================================
+
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`
 local cmp = require 'cmp'
@@ -481,3 +494,4 @@ cmp.setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
